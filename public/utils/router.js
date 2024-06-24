@@ -1,7 +1,7 @@
 export async function router() {
   const { hash } = window.location
-  const route = hash ? hash.replace('#/', '') : '/incomes'
-  const view = await import(`./views/${route}.js`)
+  const route = hash ? hash.replace('#/', '') : 'incomes'
+  const view = await import(`../views/${route}.js`)
   document.getElementById("root").innerHTML = view.render()
   view.init()
 

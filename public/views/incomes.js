@@ -1,9 +1,10 @@
-import { getState, setState } from '../state.js'
+import { getState } from '../utils/state.js'
 
 export function render() {
   return `
-    <h1>Expenses!</h1>
-    <a href="/incomes">Incomes</a>
+    <h1>Incomes!</h1>
+    <a href="/expenses">Expenses</a>
+     <a href="https://wikipedia.org" target="_blank">Wiki</a>
     <form>
       <input name="name" />
       <input name="price" />
@@ -14,9 +15,8 @@ export function render() {
 }
 
 export function init() {
-  const { user } = getState()
-  console.log(user)
-  setState({ address: 'CABA', age: 25 })
+  const all = getState()
+  console.log(all)
   const form = document.querySelector('form')
   form.addEventListener('submit', procesarForm)
 }
@@ -29,4 +29,5 @@ function procesarForm(e) {
     price: form.get('price'),
   }
   console.log(newIncome)
+
 }

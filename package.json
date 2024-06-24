@@ -1,0 +1,14 @@
+{
+  "name": "pwa-2024",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PWA server",
+  "scripts": {
+    "dev": "node --watch server.js"
+  },
+  "author": "Roberto DS",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.19.2"
+  }
+}
